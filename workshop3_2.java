@@ -1,3 +1,12 @@
+/*
+FPT UNIVERSITY K13
+Name: BiDD
+Age: 20
+DATE: 17/04/2018
+SUBJECT: PRO192
+email: luonghung.qb@gmail.com
+Workshop 3_2
+*/
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -22,8 +31,8 @@ class Atom {
             try{
                 System.out.print("Number: ");
                 
-                response = in.nextLine();
-                this.number = Integer.parseInt(response);
+                response = in.nextLine(); 
+                this.number = Integer.parseInt(response); // Check for valid input
                 
                 
             } catch (NumberFormatException | InputMismatchException e){
@@ -38,7 +47,7 @@ class Atom {
             this.symbol = in.nextLine();
             check2 = 0;     
             try{
-                checkConvert = Double.parseDouble(symbol);
+                checkConvert = Double.parseDouble(symbol); // Check for valid input
                 check2 = 1;
             } catch (NumberFormatException e) {
                 check2 = 0;
@@ -55,7 +64,7 @@ class Atom {
             this.fullName = in.nextLine();
             check3 = 0;
             try{
-                checkConvert = Double.parseDouble(fullName);
+                checkConvert = Double.parseDouble(fullName); // Check for valid input
                 check3 = 1;
             } catch (NumberFormatException e) {
                 check3 = 0;
@@ -73,8 +82,8 @@ class Atom {
                 
                 response1 = in.nextLine();
                 
-                this.weight = Float.parseFloat(response1);
-                //this.weight = in.nextDouble();
+                this.weight = Float.parseFloat(response1); // Check for valid input
+            
                 
             } catch (NumberFormatException |InputMismatchException e){
                 
@@ -87,7 +96,7 @@ class Atom {
         return true;
     }
     
-    void display(){
+    void display(){ // Method used to display
         System.out.printf("%-10d", this.number);
         System.out.printf("%-10s", this.symbol);
         System.out.printf("%-15s", this.fullName);
